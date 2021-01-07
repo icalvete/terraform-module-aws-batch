@@ -110,8 +110,9 @@ The following properties has been defined as variables in order to pass data to 
 |`security_group`           |`list`  | --       |True |Security groups to be used by Compute Environment.
 |`ce_name`                  |`string`| --       |True |Given name for Compute Environment.
 |`instance_type`            |`string`| `optimal`|True |The instance_type for compute environment to use.
-|`ecs_containerr_properties`|`map`   | --       |False |"A valid container properties provided as a single valid JSON document.|
-|`ce_type`                  |`string`|`EC2`     |False |A valid container properties provided as a single valid JSON document.
+|`ecs_containerr_properties`|`map`   | --       |False |A valid container properties provided as a single valid JSON document.|
+|`ce_type`                  |`string`|`MANAGED` |False |Compute Environment type.
+|`ce_provisioning_model     |`string`|`EC2`     |False |Compute Environment provisioning mode.
 |`ce_allocation_strategy`   |`string`|`BEST_FIT`|False | The allocation strategy to use for compute resource.
 |`max_vcpu`                 |`int`   |32        |False |Maximum allowed VCPUs allocated to instances.
 |`min_vcpu`                 |`int`   |0         |False |Minimum number of VCPUs allocated to instances.

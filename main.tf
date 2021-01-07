@@ -12,7 +12,7 @@ resource "aws_batch_compute_environment" "compute-environment" {
     allocation_strategy = var.ce_allocation_strategy
     security_group_ids  = var.security_groups
     subnets             = [data.aws_subnet_ids.subnets.id]
-    type                = "EC2"
+    type                = var.ce_provisioning_model
   }
   // To prevent a race condition during environment deletion, make sure to set depends_on to the related
   // aws_iam_role_policy_attachment; otherwise, the policy may be destroyed too soon and the compute environment

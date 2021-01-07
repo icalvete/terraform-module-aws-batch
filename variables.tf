@@ -35,6 +35,12 @@ variable "ce_type" {
   default     = "MANAGED"
 }
 
+variable "ce_provisioning_model" {
+  description = "Compute Environment provisioning_model."
+  type        = string
+  default     = "EC2"
+}
+
 // Valid items are BEST_FIT_PROGRESSIVE, SPOT_CAPACITY_OPTIMIZED or BEST_FIT.
 variable "ce_allocation_strategy" {
   description = "The allocation strategy to use for the compute resource."
